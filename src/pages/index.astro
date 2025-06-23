@@ -1,11 +1,59 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-
 <Layout>
-	<Welcome />
+  <!-- Hero Section -->
+  <section class="w-full min-h-[60vh] flex items-center justify-center bg-primary relative overflow-hidden">
+    <img src="/hero.jpg" alt="Hero" class="absolute inset-0 w-full h-full object-cover opacity-60" />
+    <div class="relative z-10 text-center text-white py-24 px-4">
+      <h1 class="text-5xl font-bold mb-4 drop-shadow-lg">Welcome to iwire</h1>
+      <p class="text-xl max-w-2xl mx-auto drop-shadow">Empowering your business with modern web solutions.</p>
+    </div>
+  </section>
+
+  <!-- Text Column -->
+  <section class="max-w-3xl mx-auto py-12 px-4 text-center">
+    <h2 class="text-2xl font-bold mb-2 text-primary">What We Do</h2>
+    <p class="text-lg text-gray-700">We provide innovative digital services to help your business grow, from web development to digital marketing and beyond.</p>
+  </section>
+
+  <!-- About Section -->
+  <section class="max-w-4xl mx-auto py-12 px-4 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h3 class="text-xl font-bold text-primary mb-2">About Us</h3>
+      <p class="text-gray-700">iwire is a team of passionate professionals dedicated to delivering high-quality web solutions. Our mission is to help you succeed online with creativity and technology.</p>
+    </div>
+    <img src="/about.jpg" alt="About iwire" class="rounded-lg shadow-md w-full h-64 object-cover" />
+  </section>
+
+  <!-- Services Grid -->
+  <section class="max-w-6xl mx-auto py-12 px-4">
+    <h3 class="text-xl font-bold text-primary mb-6 text-center">Our Services</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
+        <h4 class="font-bold text-lg mb-2 text-primary">Web Development</h4>
+        <p class="text-gray-700">Custom websites and web apps tailored to your needs.</p>
+      </div>
+      <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
+        <h4 class="font-bold text-lg mb-2 text-primary">Digital Marketing</h4>
+        <p class="text-gray-700">Grow your audience and reach with smart strategies.</p>
+      </div>
+      <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
+        <h4 class="font-bold text-lg mb-2 text-primary">Branding</h4>
+        <p class="text-gray-700">Build a memorable brand that stands out.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="max-w-6xl mx-auto py-12 px-4">
+    <h3 class="text-xl font-bold text-primary mb-6 text-center">Gallery</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="/gallery1.jpg" alt="Gallery 1" class="rounded-lg object-cover h-40 w-full" />
+      <img src="/gallery2.jpg" alt="Gallery 2" class="rounded-lg object-cover h-40 w-full" />
+      <img src="/gallery3.jpg" alt="Gallery 3" class="rounded-lg object-cover h-40 w-full" />
+      <img src="/gallery4.jpg" alt="Gallery 4" class="rounded-lg object-cover h-40 w-full" />
+    </div>
+    <p class="text-xs text-gray-400 mt-2 text-center">(Replace images in /public with your own)</p>
+  </section>
 </Layout>
