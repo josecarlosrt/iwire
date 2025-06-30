@@ -3,25 +3,27 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout>
   <!-- Hero Section -->
-  <section class="w-full min-h-[60vh] flex items-center justify-center bg-primary relative overflow-hidden">
-    <img src="/hero.jpg" alt="Hero" class="absolute inset-0 w-full h-full object-cover opacity-60" />
-    <div class="relative z-10 text-center text-white py-24 px-4">
-      <h1 class="text-5xl font-bold mb-4 drop-shadow-lg">Welcome to iwire</h1>
-      <p class="text-xl max-w-2xl mx-auto drop-shadow">Empowering your business with modern web solutions.</p>
+  <section class="w-full min-h-[60vh] flex items-center justify-start bg-black relative overflow-hidden">
+    <img src="/hero.jpg" alt="Hero" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="relative z-10 text-left text-white py-24 px-4 md:px-16 max-w-2xl"
+      style="text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 0 2px #000;">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">iWire LLC</h1>
+      <p class="text-xl md:text-2xl mb-6">New Builds. New Power. Trusted Results</p>
+      <a href="/contact" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded shadow-lg hover:bg-green-800 transition">Get in Touch</a>
     </div>
   </section>
 
   <!-- Text Column -->
   <section class="max-w-3xl mx-auto py-12 px-4 text-center">
-    <h2 class="text-2xl font-bold mb-2 text-primary">What We Do</h2>
-    <p class="text-lg text-gray-700">We provide innovative digital services to help your business grow, from web development to digital marketing and beyond.</p>
+    <h2 class="text-2xl font-bold mb-2 text-primary">Building something new?</h2>
+    <p class="text-base text-gray-700"> iWire LLC specializes in complete electrical systems for new homes, apartments, and commercial buildings. We work with builders, contractors, and homeowners to deliver safe, code-compliant installations, on time and on budget. Let’s bring your project to life!</p>
   </section>
 
   <!-- About Section -->
   <section class="max-w-4xl mx-auto py-12 px-4 grid md:grid-cols-2 gap-8 items-center">
     <div>
       <h3 class="text-xl font-bold text-primary mb-2">About Us</h3>
-      <p class="text-gray-700">iwire is a team of passionate professionals dedicated to delivering high-quality web solutions. Our mission is to help you succeed online with creativity and technology.</p>
+      <p class="text-gray-700">At iWire LLC, we have 8 years of experience handling electrical work for new construction projects of all sizes. We partner with general contractors and builders to deliver reliable service from rough-in to final inspection. Fully committed to top-quality workmanship</p>
     </div>
     <img src="/about.jpg" alt="About iwire" class="rounded-lg shadow-md w-full h-64 object-cover" />
   </section>
@@ -31,16 +33,28 @@ import Layout from '../layouts/Layout.astro';
     <h3 class="text-xl font-bold text-primary mb-6 text-center">Our Services</h3>
     <div class="grid md:grid-cols-3 gap-8">
       <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
-        <h4 class="font-bold text-lg mb-2 text-primary">Web Development</h4>
-        <p class="text-gray-700">Custom websites and web apps tailored to your needs.</p>
+        <h4 class="font-bold text-lg mb-2 text-primary">Full Electrical System Installations</h4>
+        <p class="text-gray-700">From the ground up, we design and install robust electrical systems for your new home, apartment complex, or commercial building. We handle everything from initial wiring to final fixture setup, ensuring every connection is safe, code-compliant, and ready for reliable power.</p>
       </div>
       <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
-        <h4 class="font-bold text-lg mb-2 text-primary">Digital Marketing</h4>
-        <p class="text-gray-700">Grow your audience and reach with smart strategies.</p>
+        <h4 class="font-bold text-lg mb-2 text-primary">Rough-In Wiring</h4>
+        <p class="text-gray-700">The critical first step in any new construction project, our rough-in wiring service establishes the essential electrical framework for your home, apartment complex, or commercial building. We meticulously install all the foundational wiring, conduit, and boxes within the walls, floors, and ceilings before drywall goes up.</p>
       </div>
       <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
-        <h4 class="font-bold text-lg mb-2 text-primary">Branding</h4>
-        <p class="text-gray-700">Build a memorable brand that stands out.</p>
+        <h4 class="font-bold text-lg mb-2 text-primary">Panel Installation</h4>
+        <p class="text-gray-700">As the central hub of your property's electrical system, the panel is crucial for safe and efficient power distribution. iWire LLC specializes in the precise installation of main service panels and subpanels for new homes, apartments, and commercial buildings.</p>
+      </div>
+      <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
+        <h4 class="font-bold text-lg mb-2 text-primary">Lighting Plans and Installation</h4>
+        <p class="text-gray-700">Beyond just power, iWire LLC specializes in creating and installing comprehensive lighting systems that bring your new home, apartment complex, or commercial building to life. From initial design and strategic fixture placement to energy-efficient solutions and complete installation, we ensure your lighting not only meets all code requirements but also enhances, functionality, and ambiance throughout your new build</p>
+      </div>
+      <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
+        <h4 class="font-bold text-lg mb-2 text-primary">Smart Home Pre-Wiring</h4>
+        <p class="text-gray-700">Prepare your new build for tomorrow's technology with iWire LLC's comprehensive smart home pre-wiring. We strategically install the necessary low-voltage cabling and infrastructure during the construction phase, creating a robust and flexible network ready for integrated lighting, security, audio, climate control, and more.</p>
+      </div>
+      <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
+        <h4 class="font-bold text-lg mb-2 text-primary">Code Compliance and Inspections</h4>
+        <p class="text-gray-700">At iWire LLC, safety and strict adherence to regulations are our top priorities. For your new build in Florida, we ensure every electrical installation meets or exceeds the National Electrical Code (NEC) and all relevant state and local Florida building codes.</p>
       </div>
     </div>
   </section>
@@ -49,11 +63,10 @@ import Layout from '../layouts/Layout.astro';
   <section class="max-w-6xl mx-auto py-12 px-4">
     <h3 class="text-xl font-bold text-primary mb-6 text-center">Gallery</h3>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <img src="/gallery1.jpg" alt="Gallery 1" class="rounded-lg object-cover h-40 w-full" />
-      <img src="/gallery2.jpg" alt="Gallery 2" class="rounded-lg object-cover h-40 w-full" />
-      <img src="/gallery3.jpg" alt="Gallery 3" class="rounded-lg object-cover h-40 w-full" />
-      <img src="/gallery4.jpg" alt="Gallery 4" class="rounded-lg object-cover h-40 w-full" />
+      <img src="/public/gallery1.jpg" alt="Gallery 1" class="rounded-lg object-cover h-64 w-full" />
+      <img src="/public/gallery2.jpg" alt="Gallery 2" class="rounded-lg object-cover h-64 w-full" />
+      <img src="/public/gallery3.jpg" alt="Gallery 3" class="rounded-lg object-cover h-64 w-full" />
+      <img src="/public/gallery4.jpg" alt="Gallery 4" class="rounded-lg object-cover h-64 w-full" />
     </div>
-    <p class="text-xs text-gray-400 mt-2 text-center">(Replace images in /public with your own)</p>
   </section>
 </Layout>
