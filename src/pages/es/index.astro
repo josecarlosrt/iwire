@@ -1,0 +1,96 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout>
+  <!-- Hero Section -->
+  <section class="w-full min-h-[60vh] flex items-center justify-start bg-black relative overflow-hidden">
+    <img src="/hero.jpg" alt="Hero" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="relative z-10 text-left text-white py-24 px-4 md:px-16 max-w-2xl"
+      style="text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 0 2px #000;">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">iWire LLC</h1>
+      <p class="text-xl md:text-2xl mb-6">Nuevas construcciones. Nueva Electricidad. Resultados confiables.</p>
+      <a href="/contact" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded shadow-lg hover:bg-green-800 transition">Get in Touch</a>
+    </div>
+  </section>
+
+<!-- Columna de Texto -->
+<section class="max-w-3xl mx-auto py-12 px-4 text-center">
+  <h2 class="text-2xl font-bold mb-2 text-primary">¿Construyendo algo nuevo?</h2>
+  <p class="text-base text-gray-700">
+    iWire LLC se especializa en sistemas eléctricos completos para casas nuevas, apartamentos y edificios comerciales. 
+    Trabajamos con constructores, contratistas y propietarios para ofrecer instalaciones seguras, conformes al código, 
+    a tiempo y dentro del presupuesto. ¡Hagamos realidad tu proyecto!
+  </p>
+</section>
+
+<!-- Sección Sobre Nosotros -->
+<section class="max-w-4xl mx-auto py-12 px-4 grid md:grid-cols-2 gap-8 items-center">
+  <div>
+    <h2 class="text-2xl font-bold text-primary mb-2">Sobre Nosotros</h2>
+    <p class="text-gray-700">
+      En iWire LLC contamos con 8 años de experiencia en proyectos de nueva construcción de todos los tamaños. 
+      Nos asociamos con contratistas generales y constructores para ofrecer un servicio fiable desde el cableado inicial 
+      hasta la inspección final. Totalmente comprometidos con la más alta calidad.
+    </p>
+  </div>
+  <img src="/about.jpg" alt="Sobre iWire" class="rounded-lg shadow-md w-full h-64 object-cover" />
+</section>
+
+
+<!-- Servicios -->
+<section class="max-w-6xl mx-auto py-12 px-4" id="services">
+  <h2 class="text-2xl font-bold text-primary mb-6 text-center">Nuestros Servicios</h2>
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
+      <h4 class="font-bold text-lg mb-2 text-primary">Instalaciones Eléctricas Completas</h4>
+      <p class="text-gray-700">
+        Desde cero, diseñamos e instalamos sistemas eléctricos robustos para tu casa nueva, complejo de apartamentos o edificio comercial. Nos encargamos de todo, desde el cableado inicial hasta la instalación final de luminarias, garantizando conexiones seguras, cumpliendo con el código y listas para un suministro fiable.
+      </p>
+    </div>
+    <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
+      <h4 class="font-bold text-lg mb-2 text-primary">Cableado en Obra (Rough-In)</h4>
+      <p class="text-gray-700">
+        El primer paso crítico en cualquier proyecto de nueva construcción: nuestro servicio de cableado en obra establece la infraestructura eléctrica esencial. Instalamos meticulosamente todo el cableado base, conductos y cajas dentro de paredes, suelos y techos antes de colocar el tablarroca.
+      </p>
+    </div>
+    <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
+      <h4 class="font-bold text-lg mb-2 text-primary">Instalación de Tableros</h4>
+      <p class="text-gray-700">
+        Como centro neurálgico del sistema eléctrico de tu propiedad, el tablero es clave para una distribución segura y eficiente. iWire LLC se especializa en la instalación precisa de tableros principales y subtableros para casas, apartamentos y edificios comerciales.
+      </p>
+    </div>
+    <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
+      <h4 class="font-bold text-lg mb-2 text-primary">Proyectos e Instalación de Iluminación</h4>
+      <p class="text-gray-700">
+        Más allá de la energía, iWire LLC crea e instala sistemas de iluminación completos que dan vida a tu construcción. Desde el diseño inicial y la ubicación estratégica de las luminarias hasta soluciones de eficiencia energética e instalación total, aseguramos que tu iluminación cumpla con el código y mejore la funcionalidad y el ambiente de cada espacio.
+      </p>
+    </div>
+    <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
+      <h4 class="font-bold text-lg mb-2 text-primary">Pre-Cableado para Hogares Inteligentes</h4>
+      <p class="text-gray-700">
+        Prepárate para la tecnología del mañana con nuestro pre-cableado inteligente. Instalamos el cableado de baja tensión y la infraestructura necesaria durante la construcción, creando una red flexible y robusta lista para integrar iluminación, seguridad, audio, climatización y más.
+      </p>
+    </div>
+    <div class="bg-white border rounded-lg p-6 shadow hover:shadow-lg transition">
+      <h4 class="font-bold text-lg mb-2 text-primary">Cumplimiento de Normativas e Inspecciones</h4>
+      <p class="text-gray-700">
+        En iWire LLC, la seguridad y la normativa son nuestra prioridad. Para tu proyecto en Florida, garantizamos que cada instalación eléctrica cumpla o supere el Código Eléctrico Nacional (NEC) y todas las normativas estatales y locales.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Gallery Grid -->
+  <section class="max-w-6xl mx-auto py-12 px-4">
+    <h2 class="text-2xl font-bold text-primary mb-6 text-center">Galería</h2>
+    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <img src="/gallery5.jpg" alt="Image of residential wire work" class="rounded-lg object-cover h-64 w-full" />
+      <img src="/gallery2.jpg" alt="Image of residential wire work" class="rounded-lg object-cover h-64 w-full" />
+      <img src="/gallery7.jpg" alt="Image of residential wire work" class="rounded-lg object-cover h-64 w-full" />
+      <img src="/gallery4.jpg" alt="Image of residential wire work" class="rounded-lg object-cover h-64 w-full" />
+      <img src="/gallery6.jpg" alt="Image of residential wire work" class="rounded-lg object-cover h-64 w-full" />
+      <img src="/gallery9.jpg" alt="Image of residential wire work" class="rounded-lg object-cover h-64 w-full" />
+    </div>
+  </section>
+</Layout>

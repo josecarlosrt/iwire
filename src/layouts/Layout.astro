@@ -1,5 +1,15 @@
+---
+const pathname = Astro.url.pathname;
+const isES = pathname.startsWith('/es/');
+const base = isES ? '/es' : '';
+const navItems = [
+  { href: '#services',       label: isES ? 'Servicios' : 'Services' },
+  { href: `${base}/contact`, label: isES ? 'Contacto'  : 'Contact'  },
+];
+---
+
 <!doctype html>
-<html lang="en">
+<html lang={isES ? 'es' : 'en'}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -11,16 +21,36 @@
 		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
 	</head>
 	<body class="font-lexend text-black bg-white">
-		<nav class="w-full flex justify-between items-center px-8 py-4 bg-white shadow-sm">
-			<a href="/" class="flex items-center gap-2">
-				<img src="/logo.jpg" alt="iwire logo" class="h-10 w-30 object-contain rounded-full" />
-				<span class="sr-only">iwire</span>
-			</a>
-			<ul class="flex gap-8 text-base font-bold">
-				<li><a href="#services" class="hover:text-primary">Services</a></li>
-				<li><a href="/contact" class="hover:text-primary">Contact</a></li>
-			</ul>
-		</nav>
+			<nav class="w-full flex justify-between items-center px-8 py-4 bg-white shadow-sm">
+				<a href={base + '/'} class="flex items-center gap-2">
+					<img src="/logo.jpg" alt="iwire logo" class="h-10 w-30 object-contain rounded-full" />
+				</a>
+				<ul class="flex gap-8 text-base font-bold items-center">
+					{navItems.map(item => (
+					<li><a href={item.href} class="hover:text-primary">{item.label}</a></li>
+					))}
+					<!-- Language switcher -->
+					<li class="relative group z-10">
+					<button class="flex items-center gap-1">
+						<img src={isES ? '/es-flag.png' : '/en-flag.png'} alt="" class="h-5 w-5"/>
+						<span>{isES ? 'ES' : 'EN'}</span>
+						<svg class="w-4 h-4" viewBox="0 0 20 20"><path d="M5 8l5 5 5-5"/></svg>
+					</button>
+					<ul class="absolute right-0 mt-2 w-32 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+						<li>
+						<a href="/" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
+							<img src="/en-flag.png" alt="English" class="h-4 w-4"/> English
+						</a>
+						</li>
+						<li>
+						<a href="/es/" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
+							<img src="/es-flag.png" alt="Español" class="h-4 w-4"/> Español
+						</a>
+						</li>
+					</ul>
+					</li>
+				</ul>
+			</nav>
 		<main>
 			<slot />
 		</main>
